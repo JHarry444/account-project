@@ -24,5 +24,5 @@ public class AccountManagerTest {
 	public void testGetAccount() {
 		assertEquals("Account not found.", testAccount, AccountManager.getInstance().getAccount(0));
 	}
-
+ 
 }
