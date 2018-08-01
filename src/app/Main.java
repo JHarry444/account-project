@@ -17,6 +17,8 @@ public class Main {
 		System.out.println(manager.getAccount(2));
 		System.out.println(manager.getAccount(1));
 		System.out.println(manager.getAccount(0));
+		
+		System.out.println(manager.getAccountsJSON());
 	}
 
 }

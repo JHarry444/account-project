@@ -3,6 +3,8 @@ package app;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.google.gson.Gson;
+
 public class AccountManager {
 
 	private static AccountManager instance = new AccountManager();
@@ -27,5 +29,13 @@ public class AccountManager {
 
 	public Account getAccount(long id) {
 		return accounts.get(id);
+	}
+	
+	public Map<Long, Account> getAccounts() {
+		return new HashMap<Long, Account>(accounts);
+	}
+	
+	public String getAccountsJSON() {
+		return new Gson().toJson(getAccounts());
 	}
 }
