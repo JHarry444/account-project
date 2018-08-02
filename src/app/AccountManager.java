@@ -38,4 +38,13 @@ public class AccountManager {
 	public String getAccountsJSON() {
 		return new Gson().toJson(getAccounts());
 	}
+
+	public int getAccountsByFirstName(String firstName) {
+		int count = 0;
+		for (Account account : accounts.values()) {
+			if (account.getFirstName().equals(firstName))
+				count++;
+		}
+		return count;
+	}
 }
