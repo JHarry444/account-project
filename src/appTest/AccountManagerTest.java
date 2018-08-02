@@ -20,6 +20,11 @@ public class AccountManagerTest {
 		assertTrue("Acccount not added.", AccountManager.getInstance().addAccount(new Account(999999, "Testy McTestface")));
 	}
 	
+	@Test 
+	public void testGetAccountByFirstName() {
+		assertEquals("Account not found.", 1, AccountManager.getInstance().getAccountsByFirstName("Testy"));
+	}
+	
 	@Test
 	public void testGetAccount() {
 		assertEquals("Account not found.", testAccount, AccountManager.getInstance().getAccount(0));
