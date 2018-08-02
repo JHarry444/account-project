@@ -1,8 +1,11 @@
 package app;
 
+import java.util.Objects;
+
 public class Account {
 	
-	private String firstName, lastName;
+	private String firstName;
+	private String lastName;
 	private int accountNumber;
 
 	public Account(int accountNumber, String firstName, String lastName) {
@@ -59,5 +62,10 @@ public class Account {
 		} else {
 			return false;
 		}
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(this.firstName, this.lastName, this.accountNumber);
 	}
 }

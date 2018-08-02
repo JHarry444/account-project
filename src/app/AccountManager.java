@@ -32,7 +32,7 @@ public class AccountManager {
 	}
 	
 	public Map<Long, Account> getAccounts() {
-		return new HashMap<Long, Account>(accounts);
+		return new HashMap<>(accounts);
 	}
 	
 	public String getAccountsJSON() {
