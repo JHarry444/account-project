@@ -1,7 +1,5 @@
 package app;
 
-import java.util.Scanner;
-
 public class Main {
 	
 	public static void main(String[] args) {
@@ -21,6 +19,7 @@ public class Main {
 		System.out.println(manager.getAccount(0));
 		
 		System.out.println(manager.getAccountsJSON());
+		System.out.println(manager.getAccountsByFirstName("Jordan"));
 	}
 
 }
